@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<body>
+    <section layout:fragment="conteudo">
+
+        <h1>Deploy</h1>
+
+        <form action="#" th:action="@{/}" th:object="${deploy}" method="post">
+            <p>
+                ID: <input type="text" th:field="*{id}" disabled="disabled">
+            </p>
+            <p>
+                App Name: <input type="text" th:field="*{applicationName}">
+            </p>
+            <p>
+                Version: <input type="text" th:field="*{version}">
+            </p>
+            <p>
+                <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+            </p>
+        </form>
+
+    </section>
+</body>
+</html>
